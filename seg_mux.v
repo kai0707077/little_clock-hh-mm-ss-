@@ -28,15 +28,17 @@ module seg_mux(
 	 
 always@(sel)
 	case(sel)
-		 //4'b1110:x=count[11:8];// Enable U1 ---first led of 7seg
-       //4'b1101:x=count[15:12];// Enable U2 --second led of 7seg
-       //4'b1011:x=count[19:16];// Enable U3 ---third led of 7seg
-       //4'b0111:x=count[23:20];// Enable U4 -----4th led of 7seg 
-		 
-		 4'b1110:x=count[3:0];// Enable U1 ---first led of 7seg
-       4'b1101:x=count[7:4];// Enable U2 --second led of 7seg
-       4'b1011:x=count[11:8];// Enable U3 ---third led of 7seg
-       4'b0111:x=count[15:12];// Enable U4 -----4th led of 7seg 
+//-----------------display hour & min-----------------------------------------//
+       //4'b1110:x=count[11:8];
+       //4'b1101:x=count[15:12];
+       //4'b1011:x=count[19:16];
+       //4'b0111:x=count[23:20];
+
+//-----------------display min & sec------------------------------------------//		 
+       4'b1110:x=count[3:0];
+       4'b1101:x=count[7:4];
+       4'b1011:x=count[11:8];
+       4'b0111:x=count[15:12];
 		 
 	endcase
 	 
