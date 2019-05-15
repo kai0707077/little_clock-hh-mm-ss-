@@ -47,6 +47,7 @@ seg_mux M4(
 
 	.count(count),
 	.sel(sel),
+	.rst(rst),
 	
 	.x(x)
 );
