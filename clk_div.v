@@ -19,11 +19,12 @@ always@ (posedge clk or posedge rst)
 							
     end
 
+//----------------for real test-----------------------------------------------------//	
 assign clk1 = div[25];
-
 assign clks[1:0] = div[19:18];  //best freqency for the human eyes
-			
- 
-//assign clk1 = div[3];
+
+//----------------for test bench-----------------------------------------------------//		
+ //assign clk1 = div[1];   
+ //assign clks[1:0] = div[2:1];
 
 endmodule
